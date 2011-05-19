@@ -1,5 +1,8 @@
 permalink: /:year/:month/:title.html
-source: src
 pygments: true
 paginate: 50
 markdown: kramdown
+exclude:
+  - gem_env
+  - install
+

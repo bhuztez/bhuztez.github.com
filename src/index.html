@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<ol start="{{ paginator.page | minus: 1 | times: 50 | plus: 1 }}">
+{% for post in paginator.posts  %}
+<li>
+<div><a href="{{ post.url }}">{{ post.title }}</a></div>
+</li>
+{% endfor %}
+</ol>
+
+

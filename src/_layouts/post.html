@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<h2>{{ page.title }}</h2>
+{{ page.date | date: '%Y-%m-%d' }}
+<div>{{ page.categories | join: ', ' }}</div>
+
+<div class="content">
+{{ content }}
+</div>
+

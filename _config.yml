@@ -1,6 +1,6 @@
 permalink: /:year/:month/:title.html
 pygments: true
-paginate: 50
+paginate: 100
 markdown: kramdown
 exclude:
   - gem_env

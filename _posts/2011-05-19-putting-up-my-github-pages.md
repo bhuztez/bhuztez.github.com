@@ -12,7 +12,7 @@ title: 折腾一下GitHub Pages
 
 要注意的是：
 
-* 既想正确显示中文开头的列表，又想有脚注的话，`markdown`要设置成`kramdown`
+* 既想正确显示中文开头的列表，又想有脚注的话，`markdown`要设置成`kramdown`，不过`kramdown`的ordered list不能自动编号
 
 
 [^liquid-markup-escape]: 插入`{{ "{% include" }} %}`，请参考[How to escape liquid template tags?](http://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags)

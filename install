@@ -15,6 +15,10 @@ EOF
 
 chmod u+x "${GEM_HOME}/bin/activate"
 
+cat > "${GEM_HOME}/.gitignore" << EOF
+*
+EOF
+
 gem install RedCloth
 gem install kramdown
 gem install jekyll

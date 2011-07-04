@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: /aosa/
 Allow: /
 Sitemap: http://bhuztez.github.com/sitemap.xml

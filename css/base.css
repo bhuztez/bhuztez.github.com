@@ -9,12 +9,41 @@ h2.title {
 }
 
 div.header {
-  margin-top: 2em;
+  text-align:center;
+  font-weight: bold;
 }
 
 div.content {
   padding: 1em 0;
   border-bottom: 2px solid #dddddd;
+}
+
+ul.posts {
+  list-style: none;
+  padding: 1em 2em;
+}
+
+ul.posts li {
+  padding: 4px;
+}
+
+ul.posts a {
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+ul.posts li span {
+  display: block;
+  float: right;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
 }
 
 p {

@@ -3,16 +3,25 @@ layout: default
 title: bhuztez
 ---
 
-<!--div class="header">
-<a>POSTS</a> &middot; <a>PROJECTS</a> &middot; <a>QUOTES</a> &middot; <a>ABOUT</a>
-</div-->
+<h1>Index of /</h1>
+<hr/>
 
-<ul class="posts">
-{% for post in paginator.posts  %}
+<ul class="index">
+<!--li>
+<a>about.html</a><span></span>
+</li-->
 <li>
-<a href="{{ post.url }}">{{ post.title }}</a><span>{{ post.date | date: '%Y-%m-%d' }}</span>
+<a href="posts/">posts/</a><span></span>
 </li>
-{% endfor %}
-</ul>
+<!--li>
+<a>projects.html</a><span></span>
+</li>
+<li>
+<a>quotes.html</a><span></span>
+</li>
+</ul-->
 
 
+<hr/>
+
+Last generated on {{ site.time | date: '%Y-%m-%d %H:%M:%S %Z'}}

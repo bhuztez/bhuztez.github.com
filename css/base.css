@@ -18,21 +18,21 @@ div.content {
   border-bottom: 2px solid #dddddd;
 }
 
-ul.posts {
+ul.index {
   list-style: none;
-  padding: 1em 2em;
+  padding: 0;
 }
 
-ul.posts li {
+ul.index li {
   padding: 4px;
 }
 
-ul.posts a {
+ul.index a {
   letter-spacing: 1px;
   word-spacing: 2px;
 }
 
-ul.posts li span {
+ul.index li span {
   display: block;
   float: right;
 }

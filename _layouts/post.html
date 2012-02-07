@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h2 class="title">{{ page.title }}<!--g:plusone size="medium" count="false"></g:plusone--></h2>
+<h2 class="title">{{ page.title }}</h2>
 {{ page.date | date: '%Y-%m-%d' }}
 <div>{{ page.categories | join: ', ' }}</div>
 
@@ -10,14 +10,16 @@ layout: default
 {{ content }}
 </div>
 
+Last generated on {{ site.time | date: '%Y-%m-%d %H:%M:%S %Z'}}
 
+{% unless site.server %}
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-    var disqus_shortname = 'bhuztez-github-com';
+    var disqus_shortname = '{{ site.domain }}';
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
     var disqus_identifier = '{{ page.id }}';
-    var disqus_url = 'http://bhuztez.github.com{{ page.url }}';
+    var disqus_url = 'http://{{ site.domain }}{{ page.url }}';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
@@ -28,4 +30,5 @@ layout: default
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+{% endunless %}
 

@@ -15,7 +15,7 @@ Last generated on {{ site.time | date: '%Y-%m-%d %H:%M:%S %Z'}}
 {% unless site.server %}
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-    var disqus_shortname = '{{ site.domain }}';
+    var disqus_shortname = '{{ site.domain | replace:".","-"}}';
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
     var disqus_identifier = '{{ page.id }}';

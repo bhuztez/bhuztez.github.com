@@ -48,9 +48,6 @@ a:active {
 
 p {
   margin: 2em 0;
-  line-height: 160%;
-  letter-spacing: 1px;
-  word-spacing: 2px;
 }
 
 #outer-wrapper {
@@ -63,8 +60,18 @@ dt {
   margin: 2em 0 0.5em;
 }
 
+div[lang="zh"] p {
+  line-height: 160%;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
 
-
-
+p code,
+li code {
+  border: 1px solid #cccccc;
+  background: #eeeeee;
+  border-radius: 0.25em;
+  margin: 0 2px;
+}
 
 

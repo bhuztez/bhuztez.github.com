@@ -6,7 +6,7 @@ layout: default
 {{ page.date | date: '%Y-%m-%d' }}
 <div>{{ page.categories | join: ', ' }}</div>
 
-<div class="content">
+<div class="content"{% if page.lang %} lang="{{ page.lang }}"{% endif %}>
 {{ content }}
 </div>
 

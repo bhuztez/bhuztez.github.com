@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 折腾一下GitHub Pages
+lang: zh
 ---
 
 就这么几个问题：

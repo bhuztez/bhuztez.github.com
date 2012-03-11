@@ -46,7 +46,7 @@ a:active {
   outline: none;
 }
 
-p {
+div.content>p {
   margin: 2em 0;
 }
 
@@ -67,11 +67,20 @@ div[lang="zh"] p {
 }
 
 p code,
-li code {
+li>code {
   border: 1px solid #cccccc;
   background: #eeeeee;
   border-radius: 0.25em;
   margin: 0 2px;
 }
+
+blockquote {
+  border-left: 2px solid #cccccc;
+  padding-left: 1em;
+}
+
+
+
+
 
 

@@ -70,8 +70,8 @@ p code,
 li>code {
   border: 1px solid #cccccc;
   background: #eeeeee;
-  border-radius: 0.25em;
   margin: 0 2px;
+  padding: 2px;
 }
 
 blockquote {

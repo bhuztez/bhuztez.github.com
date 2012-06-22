@@ -37,15 +37,21 @@ yum --releasever=16 --disableplugin=presto -xgrub2 -xgrub-efi --downloadonly dis
 yum --releasever=16 --disableplugin=presto -xgrub2 -xgrub-efi distro-sync
 ~~~~~~~~~~
 
-重启之后，发现少了`gnome-contacts`
+重启之后，桌面进不去了。解决方法参考 <https://bugzilla.redhat.com/show_bug.cgi?id=751729#c9> 。
+
+~~~~~~~~~~
+restorecon -R ~/.local
+~~~~~~~~~~
+
+
+进桌面之后，发现少了`gnome-contacts`
 
 ~~~~~~~~~~
 yum install gnome-contacts
 ~~~~~~~~~~
 
 
-输入法也很纠结了。别的程序对的时候，Emacs悲剧了。Emacs对的时候，别的程序都悲剧了。
-
+输入法也很纠结了。别的程序对的时候，Emacs悲剧了。Emacs对的时候，别的程序都悲剧了。最后发现是iBus变了。现在不用中文输入法的时候，切换到`xkb:layout:default:#0`，而不是直接`disable`掉。另外要注意的是，切换过去的时候，得`(ibus-disable-keymap)`一下，不然就没自动补全了。
 
 
 

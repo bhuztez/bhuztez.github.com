@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 调整 Gnome Shell
+published: false
 lang: zh
 ---
 

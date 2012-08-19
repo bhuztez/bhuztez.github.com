@@ -10,10 +10,10 @@ lang: zh
 
 为了让ssh的DNS查询都通过本地recursive resolver，使用LD_PRELOAD，覆盖掉socket相关函数。值得注意的是，在Fedora 16上，得覆盖connect而不是sendto。ssh设置
 
-~~~~~~~~~~
+{% highlight text %}
 VerifyHostKeyDNS yes
 StrictHostKeyChecking ask
-~~~~~~~~~~
+{% endhighlight %}
 
 这样DNS上有DNSSEC签名过的SSHFP记录，ssh第一次连上去的时候，就不需要输入yes来确认公钥了。
 

@@ -1,5 +1,6 @@
+.highlight {word-wrap: break-word; word-break: break-all;}
 .highlight pre {font-size: small; padding: 0.3em 0.4em; border: solid #a8b8a0; border-width: 1px 0;}
-.highlight pre .pycon {word-wrap: break-word; word-break: break-all;}
+.highlight pre code {white-space: pre-wrap;}
 .highlight  { background: #d8e8c8;  margin: 0 2em; }
 
 .highlight .hll { background-color: #ffffcc }

@@ -1,86 +1,54 @@
+html { margin: 0; padding: 0; font-size: 18px; }
+
 body {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-h2.title {
-  border-bottom: 2px solid #dddddd;
-}
-
-div.header {
-  text-align:center;
-  font-weight: bold;
-}
-
-div.content {
-  padding: 1em 0;
-  border-bottom: 2px solid #dddddd;
-}
-
-ul.index {
-  list-style: none;
-  padding: 0;
-}
-
-ul.index li {
-  padding: 4px;
-}
-
-ul.index a {
-  letter-spacing: 1px;
-  word-spacing: 2px;
-}
-
-ul.index li span {
-  display: block;
-  float: right;
-}
-
-a:link {
-  text-decoration: none;
-}
-
-a:focus,
-a:active {
-  outline: none;
-}
-
-div.content>p {
-  margin: 2em 0;
-}
-
-#outer-wrapper {
-  width: 40em;
   margin: 2em auto;
+  padding: 0;
+  font-family: monospace;
+  width: 40em;
+  color: #DCDCCC;
+  background: #1F1F1F;
 }
 
-dt {
-  font-weight: bold;
-  margin: 2em 0 0.5em;
+code {
+  white-space: pre-wrap;
 }
 
-div[lang="zh"] p {
-  line-height: 160%;
-  letter-spacing: 1px;
-  word-spacing: 2px;
-}
+.bg0 { background: #000D18; }
+.bg1 { background: #E89393; }
+.bg2 { background: #9ECE9E; }
+.bg3 { background: #F0DFAF; }
+.bg4 { background: #8CD0D3; }
+.bg5 { background: #C0BED1; }
+.bg6 { background: #DFAF8F; }
+.bg7 { background: #EFEFEF; }
 
-p code,
-li>code {
-  border: 1px solid #cccccc;
-  background: #eeeeee;
-  margin: 0 2px;
-  padding: 2px;
-}
+.fg0 { color: #000D18; }
+.fg1 { color: #E89393; }
+.fg2 { color: #9ECE9E; }
+.fg3 { color: #F0DFAF; }
+.fg4 { color: #8CD0D3; }
+.fg5 { color: #C0BED1; }
+.fg6 { color: #DFAF8F; }
+.fg7 { color: #EFEFEF; }
 
-blockquote {
-  border-left: 2px solid #cccccc;
-  padding-left: 1em;
-}
+a:link, a:visited { color: #DCDCCC; }
+a:focus, a:active { outline: none; }
+p code, li>code { background: #9ECE9E; color: #000D18; }
+blockquote { border-left: 0.2em solid #9ECE9E; padding-left: 1em; }
+div[lang="zh"] p { line-height: 160%; }
+span.cursor { background: #8FAF9F; }
 
+ul.index { list-style: none; padding: 0; margin: 0; font-size: 1.5em; }
+ul.index li { margin: 0.25em 0; }
+ul.index a:link { text-decoration: none; }
+ul.index a:hover { text-decoration: underline; }
+.title, .quotes h1 { text-align: center; }
+.quotes dt { font-weight: bold; margin: 2em 0 0.5em; }
+.quotes dd { text-align: right; }
+.content { word-wrap: normal; word-break: normal; font-family: sans-serif; }
 
-
-
-
+.highlight { word-wrap: break-word; word-break: break-all; }
+.highlight pre {font-size: 16px; padding: 0.3em 0.4em; }
+.highlight pre .pycon {white-space: pre-wrap;}
+.highlight  { margin: 0 2em; }
 

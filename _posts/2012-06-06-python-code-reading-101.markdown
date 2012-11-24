@@ -6,7 +6,7 @@ lang: zh
 
 在阅读Python代码的时候，别忘了Python标准库里几个比较有用的库，`pdb`、`ast`和`code`。`pdb`用来调试，`ast`用来解析Python代码，`code`直接能给你一个[REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)。
 
-比如，阅读nova-api的代码，并不关心url routing是怎么实现的，想知道的只是url和相应处理代码的对应关系。把nova-api最后两行代码换成下面这两行。
+比如，阅读`nova-api`的代码，并不关心URL Routing是怎么实现的，想知道的只是URL和相应处理代码的对应关系。把`nova-api`最后两行代码换成下面这两行。
 
 {% highlight python %}
 import code

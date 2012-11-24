@@ -1,0 +1,15 @@
+---
+layout: default
+title: bhuztez.github.com:~/notes
+---
+
+<div class="header">[bhuztez.github.com ~/notes]$ ls -1F</div>
+<ul class="index">
+{% for page in site.pages %}
+{% capture url %}{{ page.url|truncate:10 }}{% endcapture %}
+{% if url == '/notes/...' and page.url != '/notes/index.html' %}
+<li><a href="{{ page.url }}"><span class="fg3">{{ page.title }}</span></a></li>
+{% endif %}
+{% endfor %}
+</ul>
+<div class="footer">[bhuztez.github.com ~/notes]$ <span class="cursor">&nbsp;</span></div>

@@ -2,15 +2,16 @@
 layout: default
 ---
 
-<h2 class="title">{{ page.title }}</h2>
+<div class="title">
+<h1>{{ page.title }}</h1>
 {{ page.date | date: '%Y-%m-%d' }}
 <div>{{ page.categories | join: ', ' }}</div>
+</div>
 
 <div class="content"{% if page.lang %} lang="{{ page.lang }}"{% endif %}>
 {{ content }}
 </div>
 
-Last generated on {{ site.time | date: '%Y-%m-%d %H:%M:%S %Z'}}
 
 {% unless site.server %}
 <div id="disqus_thread"></div>

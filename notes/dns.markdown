@@ -1,6 +1,6 @@
 ---
 layout: note
-title: DNS
+title: DNS基本配置
 lang: zh
 ---
 

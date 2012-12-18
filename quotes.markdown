@@ -6,6 +6,9 @@ title: bhuztez.github.com:~/quotes
 Quotes
 ======
 
+If you don't run experiments before you start designing a NEW system, your ENTIRE SYSTEM will be an experiment!
+: -- [Mike Williams](http://www.erlang.org/faq/how_do_i.html#id52058)
+
 Confucius say: He who play in root, eventually kill tree.
 : the earliest one I could find can be found [here](https://groups.google.com/group/comp.os.linux.networking/browse_thread/thread/977ad9105ffe21aa)
 
@@ -23,5 +26,4 @@ When in doubt, use brute force.
 
 There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies. And the other way is to make it so complicated that there are no obvious deficiencies.
 : -- [C.A.R. Hoare](http://en.wikiquote.org/wiki/C._A._R._Hoare)
-
 

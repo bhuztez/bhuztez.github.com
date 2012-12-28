@@ -1,9 +1,18 @@
 ---
 layout: default
-title: bhuztez.github.com:~/notes
+title: NOTES
 ---
 
-<div class="header">[bhuztez.github.com ~/notes]$ ls -1F</div>
+<div class="header">
+<h1>H4 H4 0NLY S3RI0US</h1>
+
+<ul class="index nav">
+<li><a href="/notes/"><span class="fg4">NOTES</span></a></li>
+<li><a href="/posts/"><span class="fg3">POSTS</span></a></li>
+<li><a href="/quotes.html"><span class="fg3">QUOTES</span></a></li>
+</ul>
+</div>
+
 <ul class="index">
 {% for page in site.pages %}
 {% capture url %}{{ page.url|truncate:10 }}{% endcapture %}
@@ -12,4 +21,4 @@ title: bhuztez.github.com:~/notes
 {% endif %}
 {% endfor %}
 </ul>
-<div class="footer">[bhuztez.github.com ~/notes]$ <span class="cursor">&nbsp;</span></div>
+

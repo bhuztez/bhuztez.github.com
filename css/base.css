@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+@import url(https://fonts.googleapis.com/css?family=UnifrakturCook:700);
 
 html { margin: 0; padding: 0; font-size: 18px; }
 
@@ -44,7 +45,16 @@ ul.index { list-style: none; padding: 0; margin: 0; font-size: 1.5em; }
 ul.index li { margin: 0.25em 0; }
 ul.index a:link { text-decoration: none; }
 ul.index a:hover { text-decoration: underline; }
-.title, .quotes h1 { text-align: center; }
+ul.nav li { display: inline; }
+
+#header h1 { color: #DFAF8F; font-family: 'UnifrakturCook', sans-serif; font-size: 4em; }
+.header { margin: 0 0 0.75em 0; }
+.header h1 { color: #DFAF8F; font-family: 'UnifrakturCook', sans-serif; font-size: 1em; display: inline; }
+.header ul.nav { display: inline; font-size: 1em; }
+.header ul.nav li { margin: 0; }
+
+
+.title { text-align: center; }
 .quotes { font-family: 'Architects Daughter', cursive; }
 .quotes dt { font-weight: bold; margin: 2em 0 0.5em; }
 .quotes dd { text-align: right; }
@@ -54,4 +64,5 @@ ul.index a:hover { text-decoration: underline; }
 .highlight pre {font-size: 16px; padding: 0.3em 0.4em; }
 .highlight pre .pycon {white-space: pre-wrap;}
 .highlight  { margin: 0 2em; }
+
 

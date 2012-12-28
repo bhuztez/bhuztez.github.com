@@ -1,10 +1,8 @@
 ---
 layout: quotes
-title: bhuztez.github.com:~/quotes
+title: QUOTES
 ---
 
-Quotes
-======
 
 If you don't run experiments before you start designing a NEW system, your ENTIRE SYSTEM will be an experiment!
 : -- [Mike Williams](http://www.erlang.org/faq/how_do_i.html#id52058)

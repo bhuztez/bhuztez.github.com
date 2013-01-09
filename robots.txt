@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /notes/
+Disallow: /aosa/
 Sitemap: http://bhuztez.github.com/sitemap.xml
 

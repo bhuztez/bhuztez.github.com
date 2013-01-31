@@ -1,0 +1,23 @@
+---
+layout: default
+title: NOTES
+---
+
+<div class="header">
+<h1>H4 H4 0NLY S3RI0US</h1>
+
+<ul class="index nav">
+<li><a href="/posts/"><span class="fg3">POSTS</span></a></li>
+<li><a href="/quotes.html"><span class="fg3">QUOTES</span></a></li>
+</ul>
+</div>
+
+<ul class="index">
+{% for page in site.pages %}
+{% capture url %}{{ page.url|truncate:10 }}{% endcapture %}
+{% if url == '/links/...' and page.url != '/links/index.html' %}
+<li><a href="{{ page.url }}"><span class="fg3">{{ page.title }}</span></a></li>
+{% endif %}
+{% endfor %}
+</ul>
+

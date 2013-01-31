@@ -1,0 +1,12 @@
+---
+layout: link
+title: X11
+published: false
+lang: zh
+---
+
+[XEmbed Extension for Mozilla Plugins](https://developer.mozilla.org/en-US/docs/XEmbed_Extension_for_Mozilla_Plugins)
+
+[Emacs XEmbed](http://www.emacswiki.org/emacs/EmacsXembed)
+
+

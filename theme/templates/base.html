@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+  <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+  <link rel='stylesheet' href='{{ SITEURL }}/css/base.css' type='text/css' />
+  <link rel='stylesheet' href='{{ SITEURL }}/css/highlight.css' type='text/css' />
+  <link rel="alternate" type="application/atom+xml" title="{{ SITENAME }}" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" />
+</head>
+<body>
+{%- if PUBLISH -%}
+<a href="{{ GITHUB_URL }}"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+{%- endif -%}
+{%- block body -%}
+{%- block header -%}
+<div class="header">
+<h1>{{SITENAME}}</h1>
+
+<ul class="index nav">
+<li><a href="{{ SITEURL }}/posts/"><span class="fg3">POSTS</span></a></li>
+<li><a href="{{ SITEURL }}/quotes.html"><span class="fg3">QUOTES</span></a></li>
+</ul>
+</div>
+{%- endblock header -%}
+{%- block content %}{% endblock content -%}
+{%- endblock body %}
+</body>
+</html>
+

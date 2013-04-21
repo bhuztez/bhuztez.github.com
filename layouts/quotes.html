@@ -1,28 +1,27 @@
----
-layout: default
----
+{% extends "default.html" %}
 
+{% block body %}
 <div class="header">
 <h1>H4 H4 0NLY S3RI0US</h1>
 
 <ul class="index nav">
-<li><a href="/posts/"><span class="fg3">POSTS</span></a></li>
-<li><a href="/quotes.html"><span class="fg4">QUOTES</span></a></li>
+<li><a href="{{ ROOT_URL }}/"><span class="fg3">POSTS</span></a></li>
+<li><a href="{{ ROOT_URL }}/quotes.html"><span class="fg4">QUOTES</span></a></li>
 </ul>
 </div>
 
 <div class="quotes">
-{{ content }}
+{{ content|safe }}
 </div>
 
-{% unless site.server %}
+{% if site.publish %}
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-    var disqus_shortname = '{{ site.domain | replace:".","-"}}';
+    var disqus_shortname = 'bhuztez-github-com';
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
     var disqus_identifier = '{{ page.id }}';
-    var disqus_url = 'http://{{ site.domain }}{{ page.url }}';
+    var disqus_url = 'http://bhuztez.github.com{{ page.path }}';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
@@ -33,4 +32,6 @@ layout: default
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-{% endunless %}
+{% endif %}
+{% endblock body %}
+

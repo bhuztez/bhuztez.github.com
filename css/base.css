@@ -61,8 +61,7 @@ ul.nav li { display: inline; }
 .content { word-wrap: normal; word-break: normal; font-family: sans-serif; }
 
 .highlight { word-wrap: break-word; word-break: break-all; }
-.highlight pre {font-size: 16px; padding: 0.3em 0.4em; }
-.highlight pre .pycon {white-space: pre-wrap;}
+.highlight pre {font-size: 16px; padding: 0.3em 0.4em; white-space: pre-wrap;}
 .highlight  { margin: 0 2em; }
 
 

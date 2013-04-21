@@ -25,3 +25,5 @@ When in doubt, use brute force.
 There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies. And the other way is to make it so complicated that there are no obvious deficiencies.
 : -- [C.A.R. Hoare](http://en.wikiquote.org/wiki/C._A._R._Hoare)
 
+Research is the transformation of money into knowledge. Innovation is the transformation of knowledge into money.
+: -- [Dr Geoffrey Nicholson](http://www.guardian.co.uk/money/2010/apr/25/post-it-notes)

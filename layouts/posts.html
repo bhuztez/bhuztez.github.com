@@ -1,0 +1,18 @@
+{% extends "default.html" %}
+
+{% block body %}
+<div class="header">
+<h1>H4 H4 0NLY S3RI0US</h1>
+
+<ul class="index nav">
+<li><a href="{{ ROOT_URL }}/"><span class="fg4">POSTS</span></a></li>
+<li><a href="{{ ROOT_URL }}/quotes.html"><span class="fg3">QUOTES</span></a></li>
+</ul>
+</div>
+
+<ul class="index">
+{% for post in posts %}
+<li><a href="{{ ROOT_URL }}{{ post.path }}"><span class="fg3">{{ post.title }}</span></a></li>
+{% endfor %}
+</ul>
+{% endblock body %}

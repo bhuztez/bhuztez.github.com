@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+  <title>{{ page.title }}</title>
+  <link rel="canonical" href="http://{{site.domain}}{{ page.path }}" />
+  <link rel="stylesheet" href="{{ ROOT_URL }}/css/base.css" type="text/css" />
+  <link rel="stylesheet" href="{{ ROOT_URL }}/css/highlight.css" type="text/css" />
+</head>
+
+<body>
+{% if site.publish %}
+<a href="{{ site.me }}"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+{% endif %}
+
+{% block body %}
+{{ content|safe }}
+{% endblock %}
+</body>
+<!-- generated {{ site.time.strftime("%Y-%m-%dT%H:%M:%S%z") }} -->
+</html>
+

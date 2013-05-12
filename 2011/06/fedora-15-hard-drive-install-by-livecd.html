@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+  <title>从硬盘用LiveCD安装Fedora 15</title>
+  <link rel="canonical" href="http://bhuztez.github.io/2011/06/fedora-15-hard-drive-install-by-livecd.html" />
+  <link rel="stylesheet" href="/css/base.css" type="text/css" />
+  <link rel="stylesheet" href="/css/highlight.css" type="text/css" />
+</head>
+
+<body>
+
+<a href="https://github.com/bhuztez"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+
+
+<div class="header">
+<h1>H4 H4 0NLY S3RI0US</h1>
+
+<ul class="index nav">
+<li><a href="/"><span class="fg3">POSTS</span></a></li>
+<li><a href="/quotes.html"><span class="fg3">QUOTES</span></a></li>
+</ul>
+</div>
+
+<div class="title">
+<h1>从硬盘用LiveCD安装Fedora 15</h1>
+2011-06-05
+</div>
+
+<div class="content" lang="zh">
+<p>Fedora 15的安装DVD一如既往地<a href="http://docs.fedoraproject.org/en-US/Fedora/15/html/Installation_Guide/s1-steps-hd-installs-x86.html">不支持从LVM分区硬盘安装</a>。无奈，只能试试LiveCD了。LiveCD和DVD不同的一点是，LiveCD复制出来必须放在分区的根目录。</p>
+<div class="highlight"><pre>title Fedora 15 LiveCD
+    root (hd0,0)
+    kernel /vmlinuz0 root=live:/dev/mapper/VolGroup00-LogVol02 rootfstype=auto ro liveimg quiet rhgb
+    initrd /initrd0.img
+</pre></div>
+
+
+<p>进入直接就登录了，没机会在登录那里选语言。进去之后<code>系统设置</code>-&gt;<code>区域和语言</code>那里可以选<code>汉语（中国）</code>，注销再进去就能看见汉字了。这个时候运行安装程序也是中文的了。我的硬盘上<code>/home</code>是单独一个ext3分区，自定义文件系统结构的时候，不能给那个分区设置挂载点，不然在格式化其他分区之后就只能退出安装了。等到安装完了之后，再修改<code>/etc/fstab</code>，添加下面这行，把那个分区挂载起来，重启。</p>
+<div class="highlight"><pre>/dev/mapper/VolGroup00-LogVol02 /home           ext3    defaults    1 2
+</pre></div>
+
+
+<p>装完之后不知道从哪里设置ADSL，<code>Alt+F1</code> <code>nm-connection-editor</code> 回车，我就搞不懂了为什么系统设置里面设置网络那里不搞个按钮出来。不乱找还不知道这东西在哪里呢。登录后的菜单里面连关机都没有了。装上<code>gnome-shell-extensions-alternative-status-menu</code>，注销再进去之后就会出现了。桌面默认是空的，用<code>gnome-tweak-tool</code>可以把桌面调出来。桌面其实没啥用，空桌面才是好桌面。</p>
+<p>把自己设置为管理员之后，用自己的密码就可以在<code>PackageKit</code>那里安装软件了。安装都很顺利，如果软件包的信息都能有翻译就好了。</p>
+</div>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bhuztez-github-com';
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    var disqus_identifier = '/2011/06/fedora-15-hard-drive-install-by-livecd';
+    var disqus_url = 'http://bhuztez.github.com/2011/06/fedora-15-hard-drive-install-by-livecd.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+</body>
+<!-- generated 2013-05-12T19:01:41+0800 -->
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+  <title>升级到Fedora 16</title>
+  <link rel="canonical" href="http://bhuztez.github.io/2012/05/upgrade-to-fedora-16.html" />
+  <link rel="stylesheet" href="/css/base.css" type="text/css" />
+  <link rel="stylesheet" href="/css/highlight.css" type="text/css" />
+</head>
+
+<body>
+
+<a href="https://github.com/bhuztez"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+
+
+<div class="header">
+<h1>H4 H4 0NLY S3RI0US</h1>
+
+<ul class="index nav">
+<li><a href="/"><span class="fg3">POSTS</span></a></li>
+<li><a href="/quotes.html"><span class="fg3">QUOTES</span></a></li>
+</ul>
+</div>
+
+<div class="title">
+<h1>升级到Fedora 16</h1>
+2012-05-03
+</div>
+
+<div class="content" lang="zh">
+<p>在虚拟机里用Fedora 15 DVD最小安装后，没有网络。把DVD挂载起来，从<code>Packages</code>目录里装上<code>dhclient</code>。修改<code>/etc/sysconfig/network-scripts/ifcfg-eth0</code>，把这三项改成下面这样。</p>
+<div class="highlight"><pre>ONBOOT=&quot;yes&quot;
+BOOTPROTO=&quot;dhcp&quot;
+NM_CONTROLLED=&quot;no&quot;
+</pre></div>
+
+
+<p>修改启动项</p>
+<div class="highlight"><pre><span class="gp">$</span> chkconfig network on
+</pre></div>
+
+
+<p>启动网络</p>
+<div class="highlight"><pre><span class="gp">$</span> service network start
+</pre></div>
+
+
+<p>尝试了很多次都没能从<code>grub2</code>引导改回<code>grub</code>引导，升级的时候，选择直接排除<code>grub2</code>和<code>grub-efi</code>。另外，有<code>yum-plugin-downloadonly</code>，这样就可以放心地让它在后台先下载了。</p>
+<div class="highlight"><pre><span class="gp">$</span> yum --releasever<span class="o">=</span>16 --disableplugin<span class="o">=</span>presto -xgrub2 -xgrub-efi --downloadonly distro-sync
+</pre></div>
+
+
+<p>安装</p>
+<div class="highlight"><pre><span class="gp">$</span> yum --releasever<span class="o">=</span>16 --disableplugin<span class="o">=</span>presto -xgrub2 -xgrub-efi distro-sync
+</pre></div>
+
+
+<p>重启之后，桌面进不去了。解决方法参考 <a href="https://bugzilla.redhat.com/show_bug.cgi?id=751729#c9">https://bugzilla.redhat.com/show_bug.cgi?id=751729#c9</a> 。</p>
+<div class="highlight"><pre><span class="gp">$</span> restorecon -R ~/.local
+</pre></div>
+
+
+<p>进桌面之后，发现少了<code>gnome-contacts</code></p>
+<div class="highlight"><pre><span class="gp">$</span> yum install gnome-contacts
+</pre></div>
+
+
+<p>输入法也很纠结了。别的程序对的时候，Emacs悲剧了。Emacs对的时候，别的程序都悲剧了。最后发现是iBus变了。现在不用中文输入法的时候，切换到<code>xkb:layout:default:#0</code>，而不是直接<code>disable</code>掉。另外要注意的是，切换过去的时候，得<code>(ibus-disable-keymap)</code>一下，不然就没自动补全了。</p>
+</div>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bhuztez-github-com';
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    var disqus_identifier = '/2012/05/upgrade-to-fedora-16';
+    var disqus_url = 'http://bhuztez.github.com/2012/05/upgrade-to-fedora-16.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+</body>
+<!-- generated 2013-05-12T19:01:41+0800 -->
+</html>

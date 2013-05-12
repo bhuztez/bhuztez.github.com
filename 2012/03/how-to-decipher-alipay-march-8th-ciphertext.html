@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+  <title>解码支付宝三月八日密文</title>
+  <link rel="canonical" href="http://bhuztez.github.io/2012/03/how-to-decipher-alipay-march-8th-ciphertext.html" />
+  <link rel="stylesheet" href="/css/base.css" type="text/css" />
+  <link rel="stylesheet" href="/css/highlight.css" type="text/css" />
+</head>
+
+<body>
+
+<a href="https://github.com/bhuztez"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+
+
+<div class="header">
+<h1>H4 H4 0NLY S3RI0US</h1>
+
+<ul class="index nav">
+<li><a href="/"><span class="fg3">POSTS</span></a></li>
+<li><a href="/quotes.html"><span class="fg3">QUOTES</span></a></li>
+</ul>
+</div>
+
+<div class="title">
+<h1>解码支付宝三月八日密文</h1>
+2012-03-11
+</div>
+
+<div class="content" lang="zh">
+<p>支付宝在三月八日<a href="http://weibo.com/1627897870/y8UFSzJwC">贴了段密文出来让大家猜</a>：</p>
+<blockquote>
+<p>密文：</p>
+<p style="word-wrap: break-word; white-space: pre-wrap; font-family: monospace; margin: 0 2em">NRFHFLOGTBIHURDAFCKTFONJTNGFMESQSLBQEQJILGJRNNBOUSDRGXJRIQQRJZQURVSYRLRDOFVBFKKKFFGXDNYXLWPNFPGDIDBOGXHDNBMDSQSAKPXJHSBWYXLWWCZHJBIEHKXXYZRTPITVDOGJILLRUMCVULWZMQDSRALFRPNIZIBMOUSCKPWBELJGZOLOOZXJMAANELTFYLOSZFGKYDLKJGRPDVNWULPEOKTKFDPGNYCJPENIPQBOFDZRBOHTSHZMOMYANWSAMKLRAGTROJEXNZTAIAJRDSDNHQVMMXDZMPTUTOMLOSNGSLOPGTYUJJNSEHQJGSODKYPAH</p>
+<p>提示：</p>
+<ol>
+<li>
+<p>这是按二战时期一种知名商业密码机的原理加密后的密文，提示：</p>
+<p>AZ BY, A, L, I</p>
+</li>
+<li>
+<p>也许这张映射表在破解的时候用的到。</p>
+<p style="word-wrap: break-word; white-space: pre-wrap;">{34=65, 32=66, 33=67, 40=68, 41=69, 46=70, 44=71, 93=72, 59=73, 126=74, 125=75, 124=76, 123=78, 63=77, 62=79, 61=81, 91=80, 60=82}</p>
+</li>
+</ol>
+</blockquote>
+<p>很明显，可以搜到答案的，肯定已经有人把结果贴出来了。那就立即搜索<code>支付宝 解密 "AZ BY"</code>(比如：<a href="https://encrypted.google.com/search?q=%E6%94%AF%E4%BB%98%E5%AE%9D+%E8%A7%A3%E5%AF%86+%22AZ+BY%22">Google</a>，<a href="http://www.baidu.com/s?wd=%E6%94%AF%E4%BB%98%E5%AE%9D+%E8%A7%A3%E5%AF%86+%22AZ+BY%22">百度</a><s markdown="span">，<a href="http://www.soso.com/q?w=%E6%94%AF%E4%BB%98%E5%AE%9D+%E8%A7%A3%E5%AF%86+%22AZ+BY%22">搜搜</a>，<a href="http://www.sogou.com/web?query=%E6%94%AF%E4%BB%98%E5%AE%9D+%E8%A7%A3%E5%AF%86+%22AZ+BY%22">搜狗</a>，<a href="http://www.yahoo.cn/s?q=%E6%94%AF%E4%BB%98%E5%AE%9D+%E8%A7%A3%E5%AF%86+%22AZ+BY%22">中国雅虎</a>, <a href="http://www.jike.com/so?q=%E6%94%AF%E4%BB%98%E5%AE%9D+%E8%A7%A3%E5%AF%86+%22AZ+BY%22">即刻</a>，<a href="http://www.youdao.com/search?q=%E6%94%AF%E4%BB%98%E5%AE%9D+%E8%A7%A3%E5%AF%86+%22AZ+BY%22">有道</a>, <a href="http://cn.bing.com/search?q=%E6%94%AF%E4%BB%98%E5%AE%9D+%E8%A7%A3%E5%AF%86+%22AZ+BY%22">必应</a></s><sup id="fnref:order-1"><a class="footnote-ref" href="#fn:order-1" rel="footnote">1</a></sup>)。注意到很前面就有一条“<a href="http://www.guokr.com/post/111242/">破解三八妇女节 支付宝MM发出的邀请卡 - 死理性派小组 - 果壳网</a>”，里面提到：</p>
+<blockquote>
+<p><code>AZ BY</code>指的是线路连接板的接线是<code>A</code>接<code>Z</code> <code>B</code>接<code>Y</code>；......<code>ALI</code>正是三个转轮的初始位置，也就是密钥。......我用的是<strong>Enigma</strong>的模拟软件</p>
+</blockquote>
+<p>现在就去搜索<code>Enigma Simulator</code>(比如：<a href="https://encrypted.google.com/search?q=Enigma+Simulator">Google</a>，<a href="http://www.baidu.com/s?wd=Enigma+Simulator">百度</a>，<a href="http://cn.bing.com/search?q=Enigma+Simulator">必应</a>，<a href="http://search.yahoo.com/search?p=Enigma+Simulator">Yahoo</a>，<a href="http://www.soso.com/q?w=Enigma+Simulator">搜搜</a><s markdown="span">，<a href="http://www.youdao.com/search?q=Enigma+Simulator">有道</a>，<a href="http://www.sogou.com/web?query=Enigma+Simulator">搜狗</a>，<a href="http://www.jike.com/so?q=Enigma+Simulator">即刻</a>，<a href="http://www.yahoo.cn/s?q=Enigma+Simulator">中国雅虎</a></s><sup id="fnref:order-2"><a class="footnote-ref" href="#fn:order-2" rel="footnote">2</a></sup>)。对了，就是<a href="http://users.telenet.be/d.rijmenants/en/enigmasim.htm">这个</a>。但这操作也实在太麻烦了。幸好，在Google搜索结果第一页倒数第二个的位置，有<a href="http://startpad.googlecode.com/hg/labs/js/enigma/enigma-sim.html">一个用JavaScript写的</a>。</p>
+<p>可是又该怎么解码呢？先看看维基百科的<a href="http://en.wikipedia.org/wiki/Enigma_machine">Enigma machine</a>词条。查找<code>decrypt</code>，全部高亮显示。</p>
+<blockquote>
+<p style="line-height: 125%; letter-spacing: 0px; word-spacing: 0px;">The reflector ensured that Enigma is <a href="http://en.wikipedia.org/wiki/Involution_(mathematics)">self-reciprocal</a>: conveniently, <strong>encryption was the same as decryption</strong>. </p>
+</blockquote>
+<p>好了，打开那个<a href="http://startpad.googlecode.com/hg/labs/js/enigma/enigma-sim.html">用JavaScript写的</a>，<code>Rotor Start</code>填<code>ALI</code>，<code>Plugboard</code>填<code>AX BY</code>，在<code>Type Message Here</code>下面填上密文，就完了。如果你不看见代码就不死心的话，那这个<a href="https://gist.github.com/2016510">Gist</a>就是为你而存在的。</p>
+<p>现在是下结论的时候了。原以为其他几个搜索引擎不至于这么烂的，万万没有想到的是，那几个号称要挑战百度的搜索引擎，还远远不配做百度的对手。只要愿意，百度就是可以继续恶心下去。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:order-1">
+<p>以2012年3月11日查询结果为准。有删除线表示没在第一页看到答案。没删除线的，以第一页相关内容比例排序，有删除线的以大致结果数排序。&#160;<a class="footnote-backref" href="#fnref:order-1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:order-2">
+<p>以2012年3月11日查询结果为准。有删除线表示没在第一页看到果壳网那帖里提到的模拟器。没删除线的，以模拟器地址在第一页的出现位置排序。有删除线的，以<a href="http://www.terrylong.org/">Terry Long</a>写的Enigma模拟器在第一页出现的位置排序，没有的排在最后。&#160;<a class="footnote-backref" href="#fnref:order-2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+</div>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bhuztez-github-com';
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    var disqus_identifier = '/2012/03/how-to-decipher-alipay-march-8th-ciphertext';
+    var disqus_url = 'http://bhuztez.github.com/2012/03/how-to-decipher-alipay-march-8th-ciphertext.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+</body>
+<!-- generated 2013-05-12T19:01:41+0800 -->
+</html>

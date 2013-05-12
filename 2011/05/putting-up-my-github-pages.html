@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+  <title>折腾一下GitHub Pages</title>
+  <link rel="canonical" href="http://bhuztez.github.io/2011/05/putting-up-my-github-pages.html" />
+  <link rel="stylesheet" href="/css/base.css" type="text/css" />
+  <link rel="stylesheet" href="/css/highlight.css" type="text/css" />
+</head>
+
+<body>
+
+<a href="https://github.com/bhuztez"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+
+
+<div class="header">
+<h1>H4 H4 0NLY S3RI0US</h1>
+
+<ul class="index nav">
+<li><a href="/"><span class="fg3">POSTS</span></a></li>
+<li><a href="/quotes.html"><span class="fg3">QUOTES</span></a></li>
+</ul>
+</div>
+
+<div class="title">
+<h1>折腾一下GitHub Pages</h1>
+2011-05-19
+</div>
+
+<div class="content" lang="zh">
+<p>就这么几个问题：</p>
+<ul>
+<li>对标签的支持太差劲了。</li>
+<li>插入长一点代码，用<code>{% include %}</code><sup id="fnref:liquid-markup-escape"><a class="footnote-ref" href="#fn:liquid-markup-escape" rel="footnote">1</a></sup>的话，得把代码放在<code>_include</code>目录下，这样又得搞一套命名机制或者目录结构来避免重名。</li>
+<li>虽然文件名的格式是固定的，提供的脚本里却没提供建post的功能。</li>
+<li>GitHub不管你在<code>_config.yml</code>里把<code>source</code>设置成什么，<code>source</code>永远是仓库根目录。</li>
+</ul>
+<p>要注意的是：</p>
+<ul>
+<li>既想正确显示中文开头的列表，又想有脚注的话，<code>markdown</code>要设置成<code>kramdown</code>，不过<code>kramdown</code>的ordered list不能自动编号</li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:liquid-markup-escape">
+<p>插入<code>{% include %}</code>，请参考<a href="http://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags">How to escape liquid template tags?</a>&#160;<a class="footnote-backref" href="#fnref:liquid-markup-escape" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+</div>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bhuztez-github-com';
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    var disqus_identifier = '/2011/05/putting-up-my-github-pages';
+    var disqus_url = 'http://bhuztez.github.com/2011/05/putting-up-my-github-pages.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+</body>
+<!-- generated 2013-05-12T19:01:41+0800 -->
+</html>
